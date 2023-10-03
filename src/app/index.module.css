@@ -1,0 +1,277 @@
+
+.swiper {
+  height: 500px;
+
+}
+.my-slide {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 1rem;
+
+}
+.text-container{
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  
+}
+.text-black {
+  color: black;
+  font-size: 2.5rem;
+  font-family: cursive;
+}
+
+.text-blue {
+  color: blue;
+  font-size: 2.5rem;
+  font-family: cursive;
+   
+}
+
+.card {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 10px;
+  }
+}
+
+.hoverCard{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 430px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  margin: 0 auto; 
+  transition: all 0.5s ease;
+}
+
+
+.imageContainer{
+  position: relative;
+  flex-grow: 1; 
+  background-color: rgb(223, 221, 221);
+  border-radius: 20px;
+  transition: flex-grow 0.5s ease;
+  
+}
+
+.HoverCardImage{
+  border-radius: 20px;
+}
+
+.image{
+ width: 100%;
+ height: 100%;
+ 
+}
+
+.card-title-container {
+  flex-grow: 0;
+  background-color: rgb(255, 255, 255);
+  transition: flex-grow 0.5s ease;
+}
+
+.hoverTitle{
+  font-size: 20px;
+  padding :5px 1px 5px 5px;
+  margin: 0;
+  color: rgb(0, 0, 0);
+  text-align: start;
+  cursor: pointer; 
+  transition:  color 0.8s ease,padding  0.8s ease ;
+
+}
+.card-description{
+  opacity: 0;  
+  transform: translateY(10px); 
+  max-height: 0; 
+  overflow: hidden;  
+  transition: opacity 0.9s ease, transform 0.9s ease, max-height 1s ease;
+  padding: 5px;
+  margin: 0;
+  color: rgb(0, 0, 0);
+  text-align: start;
+  cursor: pointer;
+}
+
+.arrow-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.arrow-icon {
+  font-size: 18px; 
+  color: rgb(170, 170, 170); 
+  visibility: hidden;
+  transform: scaleX(0.8);
+  transition: transform 0.9s ease, color 0.9s ease ,visibility 0.7s ease;
+  
+}
+
+
+.hoverCard:hover .imageContainer {
+  flex-grow: 5; 
+  
+}
+
+.hoverCard:hover .card-title-container {
+  flex-grow: 1;  
+
+}
+
+
+.hoverCard:hover .card-description {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 150px; 
+
+}
+
+.hoverCard:hover .arrow-icon  {
+  transform: translateX(12px) scaleX(2); 
+  color: rgb(0, 56, 240); 
+  visibility: visible;
+ 
+}
+
+.hoverCard:hover .hoverTitle {
+  color: rgb(0, 56, 240); 
+  padding :5px 3px 5px 5px;
+}
+
+
+.disableCard{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  margin: 0 auto; 
+  position: relative;
+}
+.disableCard::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:rgba(253, 250, 250, 0.473); 
+  z-index: 1;
+}
+
+
+.overlay {
+  position: absolute; 
+  padding-right:  0.75rem;
+  padding-left:0.75rem;
+  padding-bottom: 1rem;
+  z-index: 10; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  
+}
+
+.arrows {
+   position: absolute;
+   justify-content: flex-end;
+   display: flex;
+   right: 14.5rem;
+   bottom: 2.25rem;
+   z-index: 50; 
+}
+
+.arrowsView {
+  display: inline-block; 
+  border-radius: 8px;
+  border: .5px solid blue;
+  padding: 5px; 
+  position: relative; 
+  margin-right: .75rem;
+}
+
+.arrowLeft, .arrowRight {
+  font-size: 30px;
+  cursor: pointer;
+  color: rgba(19, 119, 250, 0.89);
+  padding: 5px;
+  position: relative; 
+  transition: transform 0.3s; 
+
+}
+
+.arrowsView:hover .arrowLeft{
+  transform: translateX(-4px); 
+}
+
+.arrowsView:hover .arrowRight {
+  transform: translateX(4px); 
+}
+.card button {
+  background-color: #ffffff;
+  font-size: 0.8rem;
+  padding: 0.6rem 1.2rem; 
+  color: rgb(38, 38, 197);
+  border-radius: 10px;
+  cursor: pointer;
+  width: 10rem;
+  transition: background-color 0.2s;
+  font-weight: bold;
+}
+
+
+.card button:hover {
+  background-color: #0056b3;
+}
+
+
+.title {
+  font-size: 20px; 
+  margin: 0.4rem 0; 
+  color: #ffffff;
+}
+
+
+.HoverTxt{
+  font-size: 1.25rem; 
+  margin: 0.4rem 0; 
+  color: #000000;
+ font-weight: 400;
+}
+
+.subtitle {
+  font-size: 16px;
+  margin-bottom: 0.8rem; 
+  color: #ffffff;
+  line-height: 1.25rem;
+}
+
+
+.row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
