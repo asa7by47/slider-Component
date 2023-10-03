@@ -1,26 +1,78 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
+.primaryColor {
+  color: #144dff;
+}
+p {
+  font-size: 19px;
+  width: 86%;
+  color: #666666;
+  margin-top: 40px !important;
+  width: fit-content;
+}
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
+h1:nth-child(1) {
+  font-size: 54px;
+  color: #144dff;
+  margin: 0;
+}
+h1:nth-child(2) {
+  color: #1a1a1a;
+  font-size: 52px;
+}
+/* F2F2F2  card color */
+.card-info {
+  background-color: #f2f2f2;
+  -webkit-border-radius: 24px;
+  -webkit-border-top-right-radius: 130px;
+  -moz-border-radius: 24px;
+  -moz-border-radius-topright: 130px;
+  border-radius: 24px;
+  border-top-right-radius: 130px;
+}
+.card-info p {
+  font-size: 17px;
+}
+h6 {
+  height: fit-content;
+  font-size: 14px !important;
+}
+.paragraphContainer p {
+  margin: 0;
+  padding: 0;
+  margin-top: 0 !important;
+  font-size: 12px;
+  width: 100%;
+}
+.logo-container img {
+  height: fit-content;
+}
+.top {
+  margin-top: 100px;
+}
+svg {
+  width: 10%;
+  color: red;
+  fill: #144dff;
+  border: 1px solid #144dff;
+  border-radius: 5px;
+  padding: 7px;
+  margin-inline: 10px;
+  cursor: pointer;
+}
+.arrow--disabled {
+  fill: grey;
+  border: 1px solid grey;
+}
+.top-arrow {
+  margin-top: 132px;
+}
+@media screen and (max-width: 768px) {
+  .top-arrow {
+    margin-top: 0;
+    margin-bottom: 15px;
   }
 }
